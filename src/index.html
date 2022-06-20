@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Apple</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-slate-100">
+    <nav
+      class="text-center bg-black text-slate-300 p-2 fixed w-full md:border-b-2"
+    >
+      <div class="grid grid-cols-3 lg:hidden -top-full">
+        <div class="col text-left">
+          <button id="nav-toggle" class="px-3 py-2 text-white hover:text-white">
+            <svg
+              class="fill-current h-5 w-5 ease-in"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              onclick="ChangeImageNavBar()"
+            >
+              <title></title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 " />
+            </svg>
+          </button>
+          <a id="cross" class="hidden pl-2 pt-1" href="#">
+            <img
+              src="/imgFirstMobile/icons8-effacer-24.png"
+              alt="..."
+              onclick="ChangeImageNavBar()"
+            />
+          </a>
+        </div>
+        <div class="col mx-auto pt-1">
+          <a href="#responsive-header" class=""
+            ><img src="/imgFirstMobile/5983096421555590071-20.png" alt="..." />
+          </a>
+        </div>
+        <div class="col grid justify-items-end">
+          <a href="#responsive-header" class=""
+            ><img src="/imgFirstMobile/4.webp " alt="..." width="56px" />
+          </a>
+        </div>
+      </div>
+      <div
+        id="nav-content"
+        class="w-full lg:flex lg:items-center lg:text-center lg:w-auto hidden text-left h-screen md:h-auto"
+      >
+        <div
+          id="search"
+          class="pt-2 relative mx-auto text-gray-600 lg: grid justify-items-center lg:hidden lg:mt-0"
+        >
+          <input
+            class="bg-neutral-800 h-10 px-5 pr-16 rounded-lg text-sm text-white focus:outline-none w-full lg:w-40"
+            type="search"
+            name="search"
+            placeholder="Rechercher sur apple.com"
+          />
+          <button
+            type="submit"
+            class="absolute right-0 top-0 mt-5 mr-4 lg:left-0 lg:mt-5 lg:mr-4"
+          >
+            <svg
+              class="text-gray-600 h-4 w-4 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              id="Capa_1"
+              x="0px"
+              y="0px"
+              viewBox="0 0 56.966 56.966"
+              style="enable-background: new 0 0 56.966 56.966"
+              xml:space="preserve"
+              width="512px"
+              height="512px"
+            >
+              <path
+                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+              />
+            </svg>
+          </button>
+          <a
+            id="cross"
+            class="hidden pl-2 lg:block lg:absolute right-0 top-0 pt-5 pr-2"
+            href="#"
+          >
+            <img
+              src="/imgFirstMobile/icons8-effacer-24.png"
+              alt="..."
+              width="16px"
+              onclick="searchVisibility()"
+            />
+          </a>
+        </div>
+        <div id="nav" class="text-sm lg:flex-grow ease-in-out duration-200">
+          <a
+            href="#responsive-header"
+            class="mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 hidden"
+            ><img
+              src="/imgFirstMobile/5983096421555590071-20.png"
+              alt="..."
+              width="16px"
+            />
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 lg:pt-0 lg:w-auto text-teal-lighter hover:text-white mr-8 pl-4 pt-4 border-t w-full border-gray-500 lg:border-none lg:text-xs"
+          >
+            Store
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-2 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 ml-4 pb-2 pt-4 border-b border-t border-gray-500 lg:border-none lg:text-xs"
+          >
+            Mac
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 ml-4 pb-2 border-b border-gray-500 lg:border-none lg:text-xs"
+          >
+            iPad
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 ml-4 pb-2 border-b border-gray-500 lg:border-none lg:text-xs"
+          >
+            iPhone
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 ml-4 pb-2 border-b border-gray-500 lg:border-none lg:text-xs"
+          >
+            Watch
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 ml-4 pb-2 border-b border-gray-500 lg:border-none lg:text-xs"
+          >
+            AirPods
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 ml-4 pb-2 border-b border-gray-500 lg:border-none lg:text-xs"
+          >
+            TV & Maison
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 ml-4 pb-2 border-b border-gray-500 lg:border-none lg:text-xs"
+          >
+            Exclusivités Apple
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 ml-4 pb-2 border-b border-gray-500 lg:border-none lg:text-xs"
+          >
+            Accessoires
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 ml-4 pb-2 border-b border-gray-500 lg:border-none lg:text-xs"
+          >
+            Assistance
+          </a>
+          <a
+            href="#responsive-header"
+            class=" mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 hidden"
+            ><img
+              src="/imgFirstMobile/index.png"
+              alt="..."
+              width="12px"
+              onclick="searchVisibility()"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="text-center pt-20 text-5xl font-medium bg-white font-serif">
+      <h1 class="">iPhone 13 Pro</h1>
+    </div>
+    <div class="text-center p-2 text-xl bg-white md:text-2xl">
+      <p>L'infiniment Pro.</p>
+    </div>
+    <div class="text-center text-blue-600 bg-white">
+      <a href="#">En savoir plus ></a>
+      <a href="#" class="ml-5">Acheter ></a>
+    </div>
+    <div class="pt-10 pl-10 bg-white lg:grid justify-items-center">
+      <img
+        src="/imgFirstMobile/1618_edithor_terminaux_636x900-iPhone_13_Pro_Max_Green-img2_6229c194a8b67b1770e98e02_6143786ee26fe34852099e9d.jpg"
+        alt="..."
+      />
+    </div>
+    <div class="text-center bg-white font-medium md:font-semibold mt-2 pt-10">
+      <h2>Nouvel</h2>
+    </div>
+    <div class="bg-white grid justify-items-center">
+      <img
+        src="/imgFirstMobile/IPhone_SE_(2nd_generation)_wordmark.svg.png"
+        alt="..."
+        width="150px"
+      />
+    </div>
+    <div class="bg-white text-center text-lg md:text-2xl pt-3">
+      <p>Puissance irrésistible.À prix irrésistible.</p>
+    </div>
+    <div class="text-center text-blue-600 bg-white pt-2">
+      <a href="#">En savoir plus ></a>
+      <a href="#" class="ml-5">Acheter ></a>
+    </div>
+    <div class="bg-white pl-10 lg:grid justify-items-center">
+      <img
+        src="/imgFirstMobile/iphone-se-family-select-202203.jpeg"
+        alt="..."
+        width="600px"
+      />
+    </div>
+    <div
+      class="bg-black grid grid-rows-3 pt-10 md:grid-cols-2 md:place-items-center justify-items-center md:max-h-full md:pt-"
+    >
+      <div class="row-span-3 bg-black md:pl-80">
+        <img
+          src="/imgFirstMobile/Capture d’écran de 2022-05-05 16-56-29.png"
+          alt="..."
+        />
+        <p
+          class="text-white pt-2 pb-2 md:text-3xl md:-ml-20 md:tracking-tighter"
+        >
+          Sous la couleur,la puissance.
+        </p>
+        <a class="text-blue-600" href="#">En savoir plus ></a>
+        <a class="text-blue-600 ml-7" href="#">Acheter ></a>
+      </div>
+      <div class="row-span-3 bg-black md:pr-40">
+        <img
+          class=""
+          src="/imgFirstMobile/Apple_iPad_Air_5_knarzen_verarbeitung.webp"
+          alt="..."
+        />
+      </div>
+    </div>
+    <p class="pt-4 text-lg font-medium text-center hover:text-sky-400">
+      <button
+        onclick="formVisibility()"
+        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-200 rounded shadow"
+      >
+        Nous Contacter
+      </button>
+    </p>
+    <form
+      id="my-form"
+      class="w-full pt-10 lg:grid justify-items-center pl-2 pr-2"
+      style="display: none"
+    >
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-first-name"
+          >
+            First Name
+          </label>
+          <input
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            id="grid-first-name"
+            type="text"
+            placeholder="Vladyslav"
+          />
+          <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-last-name"
+          >
+            Last Name
+          </label>
+          <input
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="grid-last-name"
+            type="text"
+            placeholder="Dokounin"
+          />
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-password"
+          >
+            E-mail
+          </label>
+          <input
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="email"
+            type="email"
+            placeholder="vlad.dokunin@mail.ru"
+          />
+          <p class="text-gray-600 text-xs italic">
+            Some tips - as long as needed
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-password"
+          >
+            Message
+          </label>
+          <textarea
+            class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+            id="message"
+          ></textarea>
+          <p class="text-gray-600 text-xs italic">
+            Re-size can be disabled by set by resize-none / resize-y / resize-x
+            / resize
+          </p>
+        </div>
+      </div>
+      <div class="md:flex md:items-center">
+        <div class="md:w-1/3">
+          <button
+            class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+            type="button"
+          >
+            Send
+          </button>
+        </div>
+        <div class="md:w-2/3"></div>
+      </div>
+    </form>
+    <div class="grid grid-cols-1 lg:text-center pl-1">
+      <div class="col text-xs pt-6">
+        Vous pouvez aussi faire vos achats
+        <a class="text-blue-600">dans un Apple Store </a>ou
+        <a class="text-blue-600">chez un revendeur</a>. Ou appeler le 0800 046
+        046.
+      </div>
+    </div>
+    <div class="text-sm pt-3 lg:text-center pl-1">France</div>
+    <div class="text-xs pt-3 text-gray-600 lg:text-center pl-1">
+      Copyright © 2022 Apple Inc. Tous droits réservés
+    </div>
+    <div class="grid grid-cols-1 pt-1.5 lg:text-center pl-1">
+      <div class="col text-xs tracking-wider text-zinc-800">
+        <p>Engagement de confidentialité | Utilisation des cookies |</p>
+        <p class="pt-2">
+          Conditions d’utilisation | Ventes et remboursements |
+        </p>
+        <p class="pt-2">Mentions légales | Plan du site</p>
+      </div>
+    </div>
+
+    <script src="/src/MobileFirst.js"></script>
+  </body>
+</html>
