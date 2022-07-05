@@ -29,7 +29,6 @@
               xmlns="http://www.w3.org/2000/svg"
               onclick="ChangeImageNavBar()"
             >
-              <title></title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 " />
             </svg>
           </button>
@@ -58,10 +57,10 @@
       >
         <div
           id="search"
-          class="pt-2 relative mx-auto text-gray-600 lg: grid justify-items-center lg:hidden lg:mt-0"
+          class="pt-2 relative text-gray-600  grid justify-items-center lg:hidden lg:mt-0 lg:w-full mx-auto basis-5/12"
         >
           <input
-            class="bg-neutral-800 h-10 px-5 pr-16 rounded-lg text-sm text-white focus:outline-none w-full lg:w-40"
+            class="bg-neutral-800 h-10 px-5   rounded-lg text-sm text-white focus:outline-none w-11/12  "
             type="search"
             name="search"
             placeholder="Rechercher sur apple.com"
@@ -174,7 +173,7 @@
           </a>
           <a
             href="#responsive-header"
-            class=" mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 hidden"
+            class="mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-8 hidden"
             ><img
               src="/imgFirstMobile/index.png"
               alt="..."
@@ -249,6 +248,8 @@
         />
       </div>
     </div>
+
+    <!-- Fotter -->
     <p class="pt-4 text-lg font-medium text-center hover:text-sky-400">
       <button
         onclick="formVisibility()"
@@ -257,91 +258,66 @@
         Nous Contacter
       </button>
     </p>
-    <form
-      id="my-form"
-      class="w-full pt-10 lg:grid justify-items-center pl-2 pr-2"
-      style="display: none"
-    >
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-          <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            for="grid-first-name"
-          >
-            First Name
-          </label>
-          <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-            id="grid-first-name"
-            type="text"
-            placeholder="Vladyslav"
-          />
-          <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-        </div>
-        <div class="w-full md:w-1/2 px-3">
-          <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            for="grid-last-name"
-          >
-            Last Name
-          </label>
-          <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            id="grid-last-name"
-            type="text"
-            placeholder="Dokounin"
-          />
-        </div>
+    <div class="wrapper">
+      <div class="form">
+        <form action="#" id="form" style="display: none" class="form_body">
+          <div class="form_item">
+            <label for="formName" class="form_label">Name:*</label>
+            <input
+              id="formName"
+              type="text"
+              name="name"
+              class="form_input _req"
+            />
+          </div>
+          <div class="form_item">
+            <label for="formLastName" class="form_label">Last Name:*</label>
+            <input
+              id="formLastName"
+              type="text"
+              name="lastname"
+              class="form_input _req"
+            />
+          </div>
+          <div class="form_item">
+            <label for="formEmail" class="form_label">Email:*</label>
+            <input
+              id="formEmail"
+              type="text"
+              name="email"
+              class="form_input _req _email"
+            />
+          </div>
+          <div class="form_item">
+            <label for="formMessage" class="form_label">Message:</label>
+            <textarea
+              name="message"
+              id="formMessage"
+              class="form_input"
+            ></textarea>
+          </div>
+          <div class="form_item">
+            <div class="checkbox">
+              <input
+                id="formAgreement"
+                checked
+                type="checkbox"
+                name="agreement"
+                class="checkbox_input _req"
+              />
+              <label for="formAgreement" class="checkbox_label"
+                ><span
+                  >Je suis d'accord au traitement des données personnelles
+                  conformément aux conditions <a href="">Générales</a>*</span
+                ></label
+              >
+            </div>
+          </div>
+          <button type="submit" class="form_button">Envoyer</button>
+        </form>
       </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
-          <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            for="grid-password"
-          >
-            E-mail
-          </label>
-          <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            id="email"
-            type="email"
-            placeholder="vlad.dokunin@mail.ru"
-          />
-          <p class="text-gray-600 text-xs italic">
-            Some tips - as long as needed
-          </p>
-        </div>
-      </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
-          <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            for="grid-password"
-          >
-            Message
-          </label>
-          <textarea
-            class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
-            id="message"
-          ></textarea>
-          <p class="text-gray-600 text-xs italic">
-            Re-size can be disabled by set by resize-none / resize-y / resize-x
-            / resize
-          </p>
-        </div>
-      </div>
-      <div class="md:flex md:items-center">
-        <div class="md:w-1/3">
-          <button
-            class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-            type="button"
-          >
-            Send
-          </button>
-        </div>
-        <div class="md:w-2/3"></div>
-      </div>
-    </form>
+    </div>
+
     <div class="grid grid-cols-1 lg:text-center pl-1">
       <div class="col text-xs pt-6">
         Vous pouvez aussi faire vos achats
