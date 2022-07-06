@@ -49,7 +49,7 @@
 .form_input:focus {
   box-shadow: 0 0 15px #7a956b;
 }
-.form_input._error:focus {
+.form_input._error {
   box-shadow: 0 0 15px red;
 }
 textarea.form_input {
@@ -58,7 +58,7 @@ textarea.form_input {
   padding: 20px;
 }
 
-.checkbox._error .checkbox_label::before {
+.checkbox._error + .checkbox_label::before {
   box-shadow: 0 0 15px red;
 }
 .checkbox_input {
